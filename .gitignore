@@ -1,2 +1,4 @@
 .idea
+.config_backup.cfg
 .git
+.gitignore
