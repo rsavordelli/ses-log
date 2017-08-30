@@ -1,4 +1,3 @@
 .idea
-.config_backup.cfg
-.git
 .gitignore
+.config_backup.cfg
