@@ -27,4 +27,3 @@ class Utils:
         return response
 
 
-Utils().send_test_email('asd@savordel.myinstance.com')
