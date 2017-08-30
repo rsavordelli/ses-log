@@ -1,12 +1,15 @@
 import boto3
 
 class Utils:
-    def send_test_email(self, source, destination):
+    def __init__(self):
+        self.destinations = ['bounce@simulator.amazonses.com', 'complaint@simulator.amazonses.com', 'success@simulator.amazonses.com']
+
+    def send_test_email(self, source):
         ses = boto3.client('ses')
         response = ses.send_email(
             Source=source,
             Destination={
-                'ToAddresses': [destination]
+                'ToAddresses': self.destinations
             },
             Message={
                 'Subject': {
@@ -21,4 +24,7 @@ class Utils:
                  }
              }
             )
+        return response
 
+
+Utils().send_test_email('asd@savordel.myinstance.com')
